@@ -40,6 +40,8 @@ autoscale: true
 ---
 #Disclaimer/Rules
 
+![fit left](images/GettyImages-138132680.jpg)
+
 * These are **my** experiences, your mileage may vary
 * I'm not here to argue, if you want to do that buy me a beer afterwards
 * Ask questions
@@ -72,8 +74,29 @@ autoscale: true
 > CQRS is simply the creation of two objects where there was previously only one. The separation occurs based upon whether the methods are a command or a query 
 
 ---
+#Command bus
+
+---
 #Examples 
-  * User sign up flow (create user, confirmation email)
+  * API user sign up flow (create user, add user to CRM, generate api keys, confirmation email)
+  *  
+^ https://github.com/cavalle/banksimplistic
+
+---
+#Pitfalls
+  * Increased cognitive load
+  * Mocking strategies (may not shorten test runs)
+
+^ On my current project because of the size of the team and pace of development
+it is not feasible to mock out relationship between commands and ActiveRecord models. YMMV
+
+
+---
+#Wins
+  * Decreased coupling with ActiveRecord model
+  * Increased isolated unit testing
+
+
 
 ---
 #Micro Services
