@@ -1,8 +1,17 @@
-footer:@johnsonch :: Chris Johnson :: Writing For Love and Money :: http://spkr8.com/t/61311
+footer:@johnsonch :: Chris Johnson :: Going Beyond The Rails 'Defaults' :: http://spkr8.com/t/61521
 autoscale: true
 
-#Title
-##Sub Title
+![full](images/SpeakerSlides/SpeakerSlides.001.jpg)
+
+---
+![full](images/SpeakerSlides/SpeakerSlides.002.jpg)
+
+---
+
+#Going Beyond The Rails 'Defaults'
+##Without yak shaving
+
+![full](images/GettyImages-484589991.jpg)
 
 ---
 #About me
@@ -52,12 +61,16 @@ autoscale: true
 * A high level overview of a couple patters/practices for scaling your rails application
 * Some thoughts about code extraction
 
+![full](images/GettyImages-482222116.jpg)
+
 ---
 #What this talk is **not** about
 
 * A recipe for success
 * A "silver bullet" solution
 * Plug 'n Play code for your project
+
+![full](images/GettyImages-483426128.jpg)
 
 ^ Just like Coors Light isn't the beer to end all beers, these ideas aren't either.
 
@@ -70,11 +83,16 @@ problems
 
 ---
 #Don't decide and jump to a 'pattern' from the start
-  
-##Everything is a nail when you have a hammer
+
+---  
+#Everything is a nail when you have a hammer
+
+![fit inline](images/GettyImages-482576956.jpg)
 
 ---
 #Have a plan, but don't be afraid for it to be wrong
+
+![full](images/GettyImages-471638849.jpg)
 
 ---
 #"Patterns" to discuss
@@ -85,17 +103,28 @@ problems
 #CQRS 
 ##Command Query Responsibility Segregation
 
+![full](images/GettyImages-157478186.jpg)
+
+---
 > CQRS is simply the creation of two objects where there was previously only one. The separation occurs based upon whether the methods are a command or a query 
+
 
 ---
 #Let's focus on Commands
 
 > "Basically it's a way of wrapping up a distinct piece of program activity into its own class..." - shindigital.com
 
+![full](images/GettyImages-108269369.jpg)
+
 ---
 #Scenario
 ##Transferring Money
 
+![full](images/GettyImages-465856505.jpg)
+
+---
+#Disclaimer
+##This is simplified sample code from a contrived example
 
 ---
 #Controller version
@@ -196,12 +225,16 @@ end
 * This is a simple example, what what about if you were transferring funds with different currencies
 * Yes this isn't a full "Gang of Four implementation" 
 
+![full](images/GettyImages-108225179.jpg)
+
 ---
 #Commands
 ##Real Time vs Background
 
 ^ Real time commands keep your response time the same as it was before.
 Background commands can lessen the load on each request, but at the cost of not everything being fully executed
+
+![full](images/GettyImages-78631114.jpg)
 
 ---
 #Pitfalls
@@ -211,16 +244,26 @@ Background commands can lessen the load on each request, but at the cost of not 
 ^ On my current project because of the size of the team and pace of development
 it is not feasible to mock out relationship between commands and ActiveRecord models. YMMV
 
+![full](images/GettyImages-160528242.jpg)
 
 ---
 #Wins
   * Decreased coupling with ActiveRecord model
   * Increased isolated unit testing
 
+![full](images/GettyImages-187199063.jpg)
+
 ---
 #Micro Services
+
+![full](images/GettyImages-104525348.jpg)
+
+---
+#Micro Services
+
 * "... a software architecture style in which complex applications are composed of small, independent processes ..."
 * Each application should be an isolated piece of functionality 
+
 
 ^ [Start building the monolith first](http://martinfowler.com/bliki/MonolithFirst.html)
 
@@ -231,26 +274,47 @@ it is not feasible to mock out relationship between commands and ActiveRecord mo
 ---
 #Let's take it a step further and add a queue
 
+![full](images/GettyImages-175280844.jpg)
+
 ---
 #Examples 
   ![fit inline](images/bank_micro_services_with_queue.png)
+
+---
+#Queue options
+* Delayed Job
+* Sidekiq
+* Active Job
 
 ---
 #Pitfalls
   * Increased cognitive load
   * Integration testing becomes more important
 
+![full](images/GettyImages-521812209.jpg)
+
 ---
 #Wins
-  * Applications are focused in have a single small domain 
+  * Applications are focused in have a single small domain
   * Increased isolated unit testing
   * Applications can be scaled and deployed at different intervals
+
+![full](images/GettyImages-166230058.jpg)
 
 ---
 #OK, I want to go down one of these paths
 
+![full](images/GettyImages-182656049.jpg)
+
 ---
 #How to I choose what to extract/re-factor?
+
+![full](images/GettyImages-200464106-001.jpg)
+
+---
+#Metrics
+
+![full](images/GettyImages-143382456.jpg)
 
 ---
 #Metrics
@@ -259,6 +323,8 @@ it is not feasible to mock out relationship between commands and ActiveRecord mo
 
 ---
 #Then explore other languages and frameworks
+
+![full](images/GettyImages-472042929.jpg)
 
 Often there are other languages or frameworks that may make your portion of the
 application be more performant or easier to maintain.
@@ -269,16 +335,24 @@ do the work?  Can you use some 3rd party service?
 ---
 #I don't think either of these approaches are for me
 
+![full](images/GettyImages-483070250.jpg)
+
 ---
 #That is awesome
+
+![full](images/GettyImages-483556248.jpg)
+
+^ I searched for "awesome" and got a bearded man drinking coffee...
 
 ---
 #Use your problem to develop a new "pattern" 
 
+![full](images/GettyImages-490637041.jpg)
+
 ---
 #What does DHH say?
 
-> "There's no one pattern that's going to turn shitty code into magic mushrooms..."
+> "There's no one pattern that's going to turn [poo] code into magic mushrooms..."
 
 ---
 #Again start building and evaluate
@@ -287,4 +361,15 @@ do the work?  Can you use some 3rd party service?
 for whatever you can do to make it easier to work with both as a developer and 
 a user.
 
+![full](images/GettyImages-545878793.jpg)
+
 ---
+#Thank You
+
+* Please rate me on Speaker Rate, and provide feedback in the comments 
+* [http://spkr8.com/t/61521](http://spkr8.com/t/61521)
+
+![full](images/GettyImages-116846436.jpg)
+
+---
+###All images available at GettyImages.com
