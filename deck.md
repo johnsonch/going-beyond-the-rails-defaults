@@ -69,13 +69,14 @@ autoscale: true
 * A recipe for success
 * A "silver bullet" solution
 * Plug 'n Play code for your project
+* How to deploy
 
 ![full](images/GettyImages-483426128.jpg)
 
 ^ Just like Coors Light isn't the beer to end all beers, these ideas aren't either.
 
 ---
-#A word about 'patterns'
+#A word about "patterns"
 
 ^ I'm using this word with caution, I don't like the way people use them to segregate code.
 We are craftspeople and we need to challenge the status quo by developing new ways to solve
@@ -123,8 +124,9 @@ problems
 ![full](images/GettyImages-465856505.jpg)
 
 ---
-#Disclaimer
 ##This is simplified sample code from a contrived example
+
+![fit inline](images/GettyImages-479438360.jpg)
 
 ---
 #Controller version
@@ -150,6 +152,16 @@ def send_funds
   end
 end
 ```
+
+---
+#Yuck
+
+![full](images/GettyImages-482136075.jpg)
+
+---
+#Let's shift the logic to a command
+
+![full](images/GettyImages-556936763.jpg)
 
 ---
 #Commands
@@ -237,6 +249,12 @@ Background commands can lessen the load on each request, but at the cost of not 
 ![full](images/GettyImages-78631114.jpg)
 
 ---
+#Queue/Worker options
+* Delayed Job
+* Sidekiq
+* Active Job
+
+---
 #Pitfalls
   * Increased cognitive load
   * Mocking strategies (may not shorten test runs)
@@ -248,8 +266,10 @@ it is not feasible to mock out relationship between commands and ActiveRecord mo
 
 ---
 #Wins
-  * Decreased coupling with ActiveRecord model
+  * Decreased coupling with ActiveRecord model in controller
   * Increased isolated unit testing
+
+^ Again the coupling is moved to the command from the controller and that also allows you to isolate your unit testing, though you can also run into issues of having business logic in multiple places if you aren't careful
 
 ![full](images/GettyImages-187199063.jpg)
 
@@ -274,17 +294,14 @@ it is not feasible to mock out relationship between commands and ActiveRecord mo
 ---
 #Let's take it a step further and add a queue
 
+^ RabbitMQ is a popular example
+
 ![full](images/GettyImages-175280844.jpg)
 
 ---
 #Examples 
   ![fit inline](images/bank_micro_services_with_queue.png)
 
----
-#Queue options
-* Delayed Job
-* Sidekiq
-* Active Job
 
 ---
 #Pitfalls
@@ -309,6 +326,8 @@ it is not feasible to mock out relationship between commands and ActiveRecord mo
 ---
 #How to I choose what to extract/re-factor?
 
+^ A full rewrite is a naive way to execute this, start small and extract behaviors
+
 ![full](images/GettyImages-200464106-001.jpg)
 
 ---
@@ -320,6 +339,11 @@ it is not feasible to mock out relationship between commands and ActiveRecord mo
 #Metrics
   * Rank areas of the application most used and slowest 
   * Evaluate each one of these on a feasibility of extracting
+
+---
+#Metrics
+
+![fit inline](images/refactor_graph.png)
 
 ---
 #Then explore other languages and frameworks
@@ -350,11 +374,6 @@ do the work?  Can you use some 3rd party service?
 ![full](images/GettyImages-490637041.jpg)
 
 ---
-#What does DHH say?
-
-> "There's no one pattern that's going to turn [poo] code into magic mushrooms..."
-
----
 #Again start building and evaluate
 
 ^ If your application is making money and taking time to develop always search
@@ -362,6 +381,14 @@ for whatever you can do to make it easier to work with both as a developer and
 a user.
 
 ![full](images/GettyImages-545878793.jpg)
+
+---
+
+#What does DHH say?
+
+> "There's no one pattern that's going to turn [expletive deleted] code into magic mushrooms..."
+
+![full inline](images/IMG_6059.jpg)
 
 ---
 #Thank You
@@ -372,4 +399,4 @@ a user.
 ![full](images/GettyImages-116846436.jpg)
 
 ---
-###All images available at GettyImages.com
+^ All images available at GettyImages.com
