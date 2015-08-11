@@ -19,9 +19,9 @@ autoscale: true
 ![fit right](http://www.johnsonch.com/images/me.jpg)
 
 * Chris Johnson
-* Senior Software Engineer and Scrum Master at GettyImages
-* Author at Pragmatic Bookshelf
+* Senior Software Engineer and "Scrum Master" at GettyImages
 * Part-Time Instructor at Madison College
+* Author at Pragmatic Bookshelf
 * Owner at JohnsonCH, LLC
 * @johnsonch => most places on the internet
 
