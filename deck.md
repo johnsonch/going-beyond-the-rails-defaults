@@ -1,17 +1,17 @@
 footer:@johnsonch :: Chris Johnson :: Going Beyond The Rails 'Defaults' :: http://spkr8.com/t/61521
 autoscale: true
 
-![full](images/SpeakerSlides/SpeakerSlides.001.jpg)
-
----
-![full](images/SpeakerSlides/SpeakerSlides.002.jpg)
-
----
-
 #Going Beyond The Rails 'Defaults'
 ##Without yak shaving
 
 ![full](images/GettyImages-484589991.jpg)
+
+---
+
+![full](images/SpeakerSlides/SpeakerSlides.001.jpg)
+
+---
+![full](images/SpeakerSlides/SpeakerSlides.002.jpg)
 
 ---
 #About me
@@ -395,6 +395,7 @@ a user.
 
 * Please rate me on Speaker Rate, and provide feedback in the comments 
 * [http://spkr8.com/t/61521](http://spkr8.com/t/61521)
+* Materials available at [http://bit.ly/1PizpGG](http://bit.ly/1PizpGG)
 
 ![full](images/GettyImages-116846436.jpg)
 
